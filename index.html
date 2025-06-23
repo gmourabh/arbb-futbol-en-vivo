@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mundial de Clubes 2025 en Vivo</title>
+  <meta name="description" content="Disfruta el Mundial de Clubes FIFA 2025 en vivo desde tu celular. Transmisión gratuita, segura y profesional.">
+
+  <!-- Google Ads Conversion Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16705645285"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16705645285');
+
+    // Pageview conversion
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16705645285/g1FpCMXMxdMZEOXV750-'
+    });
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>¿Dónde ver el Mundial de Clubes FIFA 2025 EN VIVO?</h1>
+    <a href="#" id="img-link">
+      <img src="ver-futbol-en-vivo.png" alt="Fútbol en Vivo" class="preview-img" loading="lazy" onload="this.classList.add('loaded')">
+    </a>
+    <p>Disfruta los partidos EN VIVO desde tu celular. Transmisión segura, gratuita y profesional.</p>
+    <a href="#" id="btn-main" class="cta-button main-button">📺 Ver partidos en vivo</a>
+    <a href="#" id="btn-alt" class="cta-button alt-button">⚽ Ver otros campeonatos</a>
+  </div>
+
+  <footer>
+    <a href="https://ar.browsebitz.com/">Início</a> |
+    <a href="https://ar.browsebitz.com/politica-de-privacidade/">Política de Privacidad</a> |
+    <a href="https://ar.browsebitz.com/terminos-de-uso/">Términos de Uso</a> |
+    <a href="https://ar.browsebitz.com/politica-de-cookies/">Política de Cookies</a> |
+    <a href="https://ar.browsebitz.com/sobre-nosotros/">Sobre Nosotros</a> |
+    <a href="https://ar.browsebitz.com/contacto/">Contacto</a>
+  </footer>
+
+  <!-- Script para redirecionar com UTM + evento de conversão -->
+	<script>
+	  const urlParams = window.location.search;
+	  const destinationUrl = 'https://ar.browsebitz.com/lp-ver-futbol-en-vivo';
+
+	  function appendUTM(baseUrl) {
+		// Se já houver parâmetros na URL destino, adiciona com &
+		return baseUrl.includes('?') ? `${baseUrl}&${urlParams.slice(1)}` : `${baseUrl}${urlParams}`;
+	  }
+
+	  function redirectWithConversion(buttonId) {
+		const btn = document.getElementById(buttonId);
+		if (btn) {
+		  btn.addEventListener('click', (e) => {
+			e.preventDefault();
+
+			const finalUrl = appendUTM(destinationUrl);
+
+			// Disparar evento de conversão
+			gtag('event', 'conversion', {
+			  'send_to': 'AW-16705645285/0uhECPrOwNMZEOXV750-'
+			});
+
+			// Redirecionar após breve delay
+			setTimeout(() => {
+			  window.location.href = finalUrl;
+			}, 250);
+		  });
+		}
+	  }
+
+	  redirectWithConversion('btn-main');
+	  redirectWithConversion('btn-alt');
+	  redirectWithConversion('img-link');
+	</script>
+</body>
+</html>
